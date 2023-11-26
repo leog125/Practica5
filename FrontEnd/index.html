@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sensor Viewer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap" media="print"
+        onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap" />
+    </noscript>
+    <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="css/main.css?ver=1.2.0" rel="stylesheet">
+</head>
+
+<body id="top">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link nav-social" href="#" title="Facebook"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                            <a class="nav-link nav-social" href="#" title="Twitter"><i class="fab fa-twitter"
+                                    aria-hidden="true"></i></a>
+                            <a class="nav-link nav-social" href="#" title="Youtube"><i class="fab fa-youtube"
+                                    aria-hidden="true"></i></a>
+                            <a class="nav-link nav-social" href="#" title="Instagram"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="inner">
+                    <h1 class="heading">Sensor Values Data</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sensor</th>
+                                        <th>Value</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sensor 1</td>
+                                        <td id="actualValue">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValue')">+</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensor 2</td>
+                                        <td id="actualValue2">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValue2')">+</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensor 3</td>
+                                        <td id="actualValue3">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValue3')">+</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sensor 4</td>
+                                        <td id="actualValue4">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValue4')">+</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sensor</th>
+                                        <th>Value</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Eje X</td>
+                                        <td id="actualValueX">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValueX')">+</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eje Y</td>
+                                        <td id="actualValueY">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValueY')">+</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eje Z</td>
+                                        <td id="actualValueZ">Loading...</td>
+                                        <td><button class="btn btn-success"
+                                                onclick="addSensor('actualValueZ')">+</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p class="lead">
+                        <button type="button" class="btn btn-lg btn-default btn-notify mb-4y" id="Btn_Update"
+                            data-target="#subscribeModal">
+                            Update values
+                        </button>
+                    </p>
+                </div>
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>&copy; Your Company. Design: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/jquery.slim.min.js?ver=1.2.0"></script>
+    <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
