@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to get the last sensor value from the server
   function getLastSensorValue() {
-    fetch("http://192.168.10.2:5000/api/getSensorValue_US4")
+    fetch("http://130.130.2.68:5000/api/getSensorValue_All")
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
           actualValueSpan3.textContent = data.value.Value3;
           const actualValueSpan4 = document.getElementById("actualValue4");
           actualValueSpan4.textContent = data.value.Value4;
+          //Giroscopio
+          const actualValueSpan5 = document.getElementById("actualValueX");
+          actualValueSpan5.textContent = data.value.ValueX;
+          const actualValueSpan6 = document.getElementById("actualValueY");
+          actualValueSpan6.textContent = data.value.ValueY;
+          const actualValueSpan7 = document.getElementById("actualValueZ");
+          actualValueSpan7.textContent = data.value.ValueZ;
         } else {
           alert("Error: " + data.error);
         }
