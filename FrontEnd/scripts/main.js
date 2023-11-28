@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to get the last sensor value from the server
   function getLastSensorValue() {
-    fetch("http://192.168.10.2:5000/api/getSensorValue")
+    fetch("http://192.168.10.2:5000/api/getSensorValue_US4")
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
           // Update the sensor value on the page
-          const actualValueSpan = document.getElementById("actualValue");
-          actualValueSpan.textContent = data.last_value;
+          const actualValueSpan1 = document.getElementById("actualValue");
+          actualValueSpan1.textContent = data.value.Value1;
+          const actualValueSpan2 = document.getElementById("actualValue2");
+          actualValueSpan2.textContent = data.value.Value2;
+          const actualValueSpan3 = document.getElementById("actualValue3");
+          actualValueSpan3.textContent = data.value.Value3;
+          const actualValueSpan4 = document.getElementById("actualValue4");
+          actualValueSpan4.textContent = data.value.Value4;
         } else {
           alert("Error: " + data.error);
         }
