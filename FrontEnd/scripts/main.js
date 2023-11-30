@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to get the last sensor value from the server
   function getLastSensorValue() {
-    fetch("http://130.130.2.68:5000/api/getSensorValue_All")
+    fetch("http://172.71.11.76:5000/api/getSensorValue_US4")
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -14,18 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
           actualValueSpan3.textContent = data.value.Value3;
           const actualValueSpan4 = document.getElementById("actualValue4");
           actualValueSpan4.textContent = data.value.Value4;
-          //Giroscopio
-          const actualValueSpan5 = document.getElementById("actualValueX");
-          actualValueSpan5.textContent = data.value.ValueX;
-          const actualValueSpan6 = document.getElementById("actualValueY");
-          actualValueSpan6.textContent = data.value.ValueY;
-          const actualValueSpan7 = document.getElementById("actualValueZ");
-          actualValueSpan7.textContent = data.value.ValueZ;
         } else {
           alert("Error: " + data.error);
         }
       })
       .catch((error) => alert("Error: " + error));
+
+      fetch("http://172.71.11.76:5000/api/getSensorValue_G")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          //Giroscopio
+          const actualValueSpan5 = document.getElementById("actualValueX");
+          actualValueSpan5.textContent = data.value.Value1;
+          const actualValueSpan6 = document.getElementById("actualValueY");
+          actualValueSpan6.textContent = data.value.Value2;
+          const actualValueSpan7 = document.getElementById("actualValueZ");
+          actualValueSpan7.textContent = data.value.Value3;
+        } else {
+          alert("Error: " + data.error);
+        }})
+        .catch((error) => alert("Error: " + error));
   }
 
   // Function to update sensor value on button click
@@ -37,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   getLastSensorValue();
 
   // Periodically update the sensor value (adjust the interval as needed)
-  setInterval(getLastSensorValue, 10000); // Update every 10 seconds
+  setInterval(getLastSensorValue, 3000); // Update every 10 seconds
 
   // Add click event listener to the button
   const updateButton = document.getElementById("Btn_Update");

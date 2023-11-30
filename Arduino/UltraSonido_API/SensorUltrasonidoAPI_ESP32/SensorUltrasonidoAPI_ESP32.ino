@@ -54,7 +54,7 @@ void loop() {
   http.begin(serverUrl);
   http.addHeader("Content-Type", "application/json");
 
-  // Realizar la solicitud POST
+  // Realizar l1a solicitud POST
   int httpResponseCode = http.POST(json);
 
   // Verificar la respuesta del servidor

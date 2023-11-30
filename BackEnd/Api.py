@@ -253,5 +253,5 @@ def get_last_sensor_value_All():
 if __name__ == '__main__':
     # Run the application on localhost:5000
     # app.run(host='192.168.10.2', port=5000, debug=True)
-    app.run(host='130.130.2.68', port=5000, debug=True)
+    app.run(host='172.71.11.76', port=5000, debug=True)
     #app.run(debug=True)

@@ -13,7 +13,7 @@
 
 const char *ssid = "LAPTOP-5BUGCH90";
 const char *password = "123456789";
-const char *serverUrl = "http://192.168.10.2:5000/api/receive_data_US4";
+const char *serverUrl = "http://172.71.11.76:5000/api/receive_data_US4";
 
 void setup() {
   Serial.begin(115200);
