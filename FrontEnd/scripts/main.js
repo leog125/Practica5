@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   getLastSensorValue();
 
   // Periodically update the sensor value (adjust the interval as needed)
-  setInterval(getLastSensorValue, 3000); // Update every 10 seconds
+  setInterval(getLastSensorValue, 1000); // Update every 10 seconds
 
   // Add click event listener to the button
   const updateButton = document.getElementById("Btn_Update");
